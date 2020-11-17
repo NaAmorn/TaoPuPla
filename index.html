@@ -34,6 +34,10 @@
                 new media_line_me.LineButton({ "pc": true, "lang": "en", "type": "a", "text": "https://naamorn.github.io/TaoPuPla/index.html?usertype=client&gameid=xdojdie", "withUrl": true });
             </script>
         </span>
+        <div id="vueApp">
+            {{ usertype }}
+            {{ gameid }}
+        </div>
     </div>
     <script>
         const params = new URLSearchParams(window.location.search)
@@ -41,6 +45,15 @@
         var gameId = params.get('gameid') ? params.get('gameid') : localStorage.getItem('gameid')
         localStorage.setItem('usertype', userType)
         localStorage.setItem('gameid', gameId)
+
+
+        var vueApp = new Vue({
+            el: '#vueApp',
+            data: {
+                usertype: userType,
+                gameid: gameId
+            }
+        })
     </script>
 </body>
 </html>
