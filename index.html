@@ -31,9 +31,16 @@
     <div style="height: 100%">
         <span>
             <script>
-                new media_line_me.LineButton({ "pc": false, "lang": "en", "type": "a", "text": "", "withUrl": true });
+                new media_line_me.LineButton({ "pc": false, "lang": "en", "type": "a", "text": "https://naamorn.github.io/TaoPuPla/index.html?usertype=client&gameid=xdojdie", "withUrl": true });
             </script>
         </span>
     </div>
+    <script>
+        const params = new URLSearchParams(window.location.search)
+        var userType = params.get('usertype') ? params.get('usertype') : localStorage.getItem('usertype')
+        var gameId = params.get('gameid') ? params.get('gameid') : localStorage.getItem('gameid')
+        localStorage.setItem('usertype', userType)
+        localStorage.setItem('gameid', gameId)
+    </script>
 </body>
 </html>
