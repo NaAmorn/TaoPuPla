@@ -25,17 +25,15 @@
             box-sizing: border-box
         }
     </style>
-    <script type="text/javascript">
-        function shareLine() {
-
-            new media_line_me.LineButton({ "pc": false, "lang": "en", "type": "a", "text": "", "withUrl": true });
-        }
-    </script>
 </head>
 <body>
     <morn-nav></morn-nav>
     <div style="height: 100%">
-        <button type="button" onclick="shareLine()">share</button>
+        <span>
+            <script>
+                new media_line_me.LineButton({ "pc": false, "lang": "en", "type": "a", "text": "", "withUrl": true });
+            </script>
+        </span>
     </div>
 </body>
 </html>
