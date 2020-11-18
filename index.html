@@ -8,6 +8,7 @@
     <script src="../scripts/vue.js"></script>
     <script src="../scripts/httpVueLoader.js"></script>
     <script type="text/javascript" src="//media.line.me/js/line-button.js?v=20140411"></script>
+    <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
     <style>
         morn-nav {
             display: none;
@@ -53,8 +54,14 @@
             data: {
                 usertype: userType,
                 gameid: gameId
+            },
+            methods: {
+                inviteMesseage: function () {
+                    return 'https://naamorn.github.io/TaoPuPla/index.html?usertype=client&gameid=' + this.gameId
+                }
             }
         })
     </script>
+    <div class="line-it-button" data-lang="en" data-type="share-b" data-ver="3" v-bind:data-url="inviteMesseage" data-color="default" data-size="small" data-count="true" style="display: none;"></div>
 </body>
 </html>
